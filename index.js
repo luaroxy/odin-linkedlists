@@ -1,14 +1,20 @@
 import LinkedList from "./linkedList.js";
-import Node from "./node.js";
 
 const linkedList = new LinkedList();
-const newNode = new Node("test1");
-const head = linkedList.prepend(newNode);
 
-const newNode2 = new Node("test2");
-const nodee = linkedList.append(newNode2);
-
-const newNode3 = new Node("test3");
-const nodee2 = linkedList.append(newNode3);
+linkedList.prepend("test1");
+linkedList.append("test2");;
+linkedList.append("test3");
 
 console.log(linkedList);
+console.log(linkedList.size());
+console.log(linkedList.head());
+console.log(linkedList.tail());
+console.log(linkedList.at(3));
+linkedList.pop();
+console.log(linkedList);
+console.log(linkedList.contains("test1"));
+console.log(linkedList.find("test2"));
+console.log(linkedList.toString());
+linkedList.prepend("test3");
+console.log(linkedList.toString());
