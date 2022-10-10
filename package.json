@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/luaroxy/odin-linkedlists/issues"
   },
-  "homepage": "https://github.com/luaroxy/odin-linkedlists#readme"
+  "homepage": "https://github.com/luaroxy/odin-linkedlists#readme",
+  "devDependencies": {
+    "eslint": "^8.25.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "prettier": "2.7.1"
+  }
 }
