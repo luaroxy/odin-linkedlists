@@ -92,4 +92,33 @@ export default class LinkedList
         return stringList += 'null';
     }
 
+    insertAt(value, index){
+        if(this.listHead == null) this.prepend(value); 
+        else {
+            let cur = this.listHead;
+            let prev = null;
+            for(let i=0; i < index; i++){ 
+                prev = cur;
+                cur = cur.nextNode;
+                if (cur == null) break; //if index is bigger than end of list, add node at end of list
+            }
+            let tmp = new Node(value);
+            prev.nextNode = tmp;
+            tmp.nextNode = cur;
+        }
+    }
+
+    removeAt(index){
+        if(this.listHead == null) return "List is already empty";
+        else {
+            let cur = this.listHead;
+            let prev = null;
+            for(let i=0; i < index; i++){ 
+                prev = cur;
+                cur = cur.nextNode;
+                if (cur == null) return "There is no item for this index";
+            }
+            prev.nextNode = cur.nextNode;
+        }
+    }
 }
